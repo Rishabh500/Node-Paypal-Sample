@@ -2,15 +2,17 @@
 This is sample for using paypal payment api with node-express 
 
 # Usage
-*1. Create a new sandbox business account from https://www.sandbox.paypal.com
+* Create a new sandbox business account from https://www.sandbox.paypal.com
 
-*2. Add PayPal-node-SDK ("https://github.com/paypal/PayPal-Java-SDK")
-     ```js
+* Add PayPal-node-SDK ("https://github.com/paypal/PayPal-Java-SDK")
+    
+    ```
     var paypal = require('paypal-rest-sdk');
     ```
     
-*3. Create config options, with parameters (mode, client_id, secret).
-    ```js
+* Create config options, with parameters (mode, client_id, secret).
+   
+   ```
     paypal.configure({
       'mode': 'sandbox', //sandbox or live
       'client_id': 'EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM',
@@ -18,8 +20,10 @@ This is sample for using paypal payment api with node-express
     });
     ```
     
-*4.  Invoke the rest api (eg: create a PayPal payment) with required parameters (eg: data, config_options, callback).
-    ```js
+* Invoke the rest api (eg: create a PayPal payment) with required parameters (eg: data, config_options, callback).
+   
+   
+   ```
    paypal.payment.create(create_payment_json, function (error, payment) {
    if (error) {
        console.log(error);
